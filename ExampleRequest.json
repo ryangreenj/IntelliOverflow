@@ -1,0 +1,38 @@
+https://api.stackexchange.com/search/advanced?site=stackoverflow.com&q=vs+error+5544
+{
+	"items": [
+		{
+			"tags": [
+				"visual-studio-2010",
+				"visual-studio",
+				"tfs",
+				"coded-ui-tests"
+			],
+			"owner": {
+				"account_id": 1199198,
+				"reputation": 11969,
+				"user_id": 1170221,
+				"user_type": "registered",
+				"accept_rate": 89,
+				"profile_image": "https://www.gravatar.com/avatar/d0e6da275c163016a1c31bad501e03f9?s=128&d=identicon&r=PG",
+				"display_name": "RobVious",
+				"link": "https://stackoverflow.com/users/1170221/robvious"
+			},
+			"is_answered": true,
+			"view_count": 5875,
+			"accepted_answer_id": 17884102,
+			"answer_count": 3,
+			"score": 1,
+			"last_activity_date": 1436780417,
+			"creation_date": 1369331705,
+			"last_edit_date": 1369333528,
+			"question_id": 16720737,
+			"content_license": "CC BY-SA 3.0",
+			"link": "https://stackoverflow.com/questions/16720737/codedui-tests-failing-due-to-missing-assembly-reference",
+			"title": "CodedUI tests failing due to missing assembly reference?"
+		}
+	],
+	"has_more": false,
+	"quota_max": 300,
+	"quota_remaining": 276
+}
