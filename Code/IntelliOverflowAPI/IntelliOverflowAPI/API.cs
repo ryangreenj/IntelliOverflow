@@ -61,5 +61,19 @@ namespace IntelliOverflowAPI
 
             return request;
         }
+
+        public List<Post> RankResults(StackExchangeRequest requestIn)
+        {
+            List<Post> posts = requestIn.items;
+
+            return posts;
+        }
+
+        public string RetrievePostText(int postId)
+        {
+            string text = "";
+
+            return text;
+        }
     }
 }

@@ -14,6 +14,7 @@
             <TextBlock Margin="10" HorizontalAlignment="Center">IntelliOverflow</TextBlock>
             <TextBox Height="23" TextWrapping="Wrap" Text="Enter Search..."/>
             <Button Content="Search" Click="searchBtn_Click" Width="120" Height="80" x:Name="searchBtn" Margin="90,0"/>
+            <ListBox x:Name="listBox" Height="140"/>
         </StackPanel>
     </Grid>
 </UserControl>
