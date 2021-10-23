@@ -5,7 +5,10 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelliOverflowAPI", "IntelliOverflowAPI\IntelliOverflowAPI.csproj", "{C56D15A7-44FE-4ECB-BFA4-F6230F55D0B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITest", "APITest\APITest.csproj", "{3864CBF6-CE78-4E7B-A66F-1FB4986A0DA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APITest", "APITest\APITest.csproj", "{3864CBF6-CE78-4E7B-A66F-1FB4986A0DA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C56D15A7-44FE-4ECB-BFA4-F6230F55D0B5} = {C56D15A7-44FE-4ECB-BFA4-F6230F55D0B5}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

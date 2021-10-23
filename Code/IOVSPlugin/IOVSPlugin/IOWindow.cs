@@ -15,7 +15,7 @@ namespace IOVSPlugin
     /// implementation of the IVsUIElementPane interface.
     /// </para>
     /// </remarks>
-    [Guid("efaad6ec-a755-4916-9698-e6a9947c977b")]
+    [Guid("ff826538-b08b-4ced-83f3-c883bc0c3448")]
     public class IOWindow : ToolWindowPane
     {
         /// <summary>
@@ -23,7 +23,7 @@ namespace IOVSPlugin
         /// </summary>
         public IOWindow() : base(null)
         {
-            this.Caption = "IntelliOverflow";
+            this.Caption = "Intelli Overflow";
 
             // This is the user control hosted by the tool window; Note that, even if this class implements IDisposable,
             // we are not calling Dispose on this object. This is because ToolWindowPane calls Dispose on

@@ -1,0 +1,851 @@
+{
+	"items": [
+		{
+			"tags": [
+				"gcc",
+				"x86-64",
+				"masm"
+			],
+			"owner": {
+				"account_id": 22229834,
+				"reputation": 3,
+				"user_id": 16466209,
+				"user_type": "registered",
+				"profile_image": "https://lh3.googleusercontent.com/a/AATXAJyyjllf0HjHBqRa9-SMSJ9QLogj6lsSS-eYJhhY=k-s256",
+				"display_name": "Andrew Phillips",
+				"link": "https://stackoverflow.com/users/16466209/andrew-phillips"
+			},
+			"is_answered": false,
+			"view_count": 25,
+			"answer_count": 0,
+			"score": 0,
+			"last_activity_date": 1634932601,
+			"creation_date": 1634932601,
+			"question_id": 69682447,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69682447/unable-to-assemble-using-ml-ml64",
+			"title": "unable to assemble using ml/ml64"
+		},
+		{
+			"tags": [
+				"asp.net",
+				".net",
+				"visual-studio",
+				"docker",
+				"asp.net-core"
+			],
+			"owner": {
+				"account_id": 22655191,
+				"reputation": 11,
+				"user_id": 17205957,
+				"user_type": "registered",
+				"profile_image": "https://lh3.googleusercontent.com/a/AATXAJzcG5zsGjkfR1sgp4qcY3L5ajcYGUX77Z4JnwpK7w=k-s256",
+				"display_name": "SeanBaker",
+				"link": "https://stackoverflow.com/users/17205957/seanbaker"
+			},
+			"is_answered": false,
+			"view_count": 27,
+			"answer_count": 1,
+			"score": 1,
+			"last_activity_date": 1634926926,
+			"creation_date": 1634831518,
+			"last_edit_date": 1634833549,
+			"question_id": 69665099,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69665099/docker-compose-doesnt-work-from-visual-studio",
+			"title": "docker-compose doesn&#39;t work from Visual Studio"
+		},
+		{
+			"tags": [
+				"c++",
+				"runtime-error",
+				"memory-access",
+				"visual-studio-2022",
+				"read-access"
+			],
+			"owner": {
+				"account_id": 15283953,
+				"reputation": 11,
+				"user_id": 11027490,
+				"user_type": "registered",
+				"profile_image": "https://graph.facebook.com/639353803186020/picture?type=large",
+				"display_name": "Tommy Lau",
+				"link": "https://stackoverflow.com/users/11027490/tommy-lau"
+			},
+			"is_answered": false,
+			"view_count": 44,
+			"answer_count": 1,
+			"score": 0,
+			"last_activity_date": 1634920879,
+			"creation_date": 1634919433,
+			"question_id": 69680112,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69680112/i-dont-understand-how-this-error-only-occurs-in-codewars-but-not-in-my-visual-s",
+			"title": "I don&#39;t understand how this error only occurs in Codewars but not in my Visual Studio IDE. (C++) Kata: Sum by Factors"
+		},
+		{
+			"tags": [
+				"c++",
+				"c++17",
+				"c++14",
+				"auto",
+				"cl"
+			],
+			"owner": {
+				"account_id": 13252444,
+				"reputation": 33,
+				"user_id": 9569570,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/2af67d84f559f9594f340f09e93386d7?s=256&d=identicon&r=PG&f=1",
+				"display_name": "Ivan Malivanchuk",
+				"link": "https://stackoverflow.com/users/9569570/ivan-malivanchuk"
+			},
+			"is_answered": true,
+			"view_count": 109,
+			"bounty_amount": 500,
+			"bounty_closes_date": 1635520772,
+			"accepted_answer_id": 68973046,
+			"answer_count": 1,
+			"score": 3,
+			"last_activity_date": 1634915972,
+			"creation_date": 1630240561,
+			"last_edit_date": 1630241178,
+			"question_id": 68972950,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/68972950/c14-errors-in-c17-lnk2019-c1001-altogether",
+			"title": "C++14 errors in C++17, LNK2019, C1001 altogether"
+		},
+		{
+			"tags": [
+				"c++",
+				"cmake",
+				"cuda",
+				"dynamic-parallelism"
+			],
+			"owner": {
+				"account_id": 391928,
+				"reputation": 1741,
+				"user_id": 752878,
+				"user_type": "registered",
+				"accept_rate": 66,
+				"profile_image": "https://www.gravatar.com/avatar/8b5ca6eb6490a406919b53c5f69655ad?s=256&d=identicon&r=PG",
+				"display_name": "Justin",
+				"link": "https://stackoverflow.com/users/752878/justin"
+			},
+			"is_answered": false,
+			"view_count": 41,
+			"answer_count": 1,
+			"score": 1,
+			"last_activity_date": 1634915914,
+			"creation_date": 1634906632,
+			"question_id": 69677109,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69677109/why-cant-i-link-to-my-cuda-static-library-that-uses-dynamic-parallelism-and-sep",
+			"title": "Why can&#39;t I link to my CUDA static library that uses Dynamic Parallelism and Separable Compilation?"
+		},
+		{
+			"tags": [
+				"visual-studio",
+				"cmake",
+				"clang",
+				"llvm"
+			],
+			"owner": {
+				"account_id": 16316396,
+				"reputation": 47,
+				"user_id": 11783384,
+				"user_type": "registered",
+				"profile_image": "https://i.stack.imgur.com/E0nK3.jpg?s=256&g=1",
+				"display_name": "woldgrep",
+				"link": "https://stackoverflow.com/users/11783384/woldgrep"
+			},
+			"is_answered": false,
+			"view_count": 20,
+			"answer_count": 1,
+			"score": 0,
+			"last_activity_date": 1634895976,
+			"creation_date": 1634823082,
+			"question_id": 69662935,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69662935/unable-to-compile-llvm-pass-on-windows-using-visual-studio",
+			"title": "Unable to compile llvm pass on Windows using Visual studio"
+		},
+		{
+			"tags": [
+				"c++",
+				"visual-studio",
+				"openssl"
+			],
+			"owner": {
+				"account_id": 22791771,
+				"reputation": 13,
+				"user_id": 16945974,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/7e67d07c108e2e2902de4d598fb62f8b?s=256&d=identicon&r=PG&f=1",
+				"display_name": "DarkCoder",
+				"link": "https://stackoverflow.com/users/16945974/darkcoder"
+			},
+			"is_answered": false,
+			"view_count": 55,
+			"answer_count": 1,
+			"score": 0,
+			"last_activity_date": 1634894747,
+			"creation_date": 1634300911,
+			"question_id": 69584748,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69584748/how-to-link-the-openssl-library-using-visual-studio-2019-and-c",
+			"title": "How to link the OpenSSL library using Visual Studio 2019 and c++?"
+		},
+		{
+			"tags": [
+				"c++",
+				"windows",
+				"visual-studio-2019",
+				"wdk"
+			],
+			"owner": {
+				"account_id": 22832197,
+				"reputation": 1,
+				"user_id": 16980469,
+				"user_type": "registered",
+				"profile_image": "https://lh3.googleusercontent.com/a/AATXAJxEX0bUCeZfcKpfN0gkT21bqBcHCro7hn6bLsBr=k-s256",
+				"display_name": "Tung",
+				"link": "https://stackoverflow.com/users/16980469/tung"
+			},
+			"is_answered": false,
+			"view_count": 111,
+			"answer_count": 0,
+			"score": 0,
+			"last_activity_date": 1634875808,
+			"creation_date": 1632366797,
+			"last_edit_date": 1634875808,
+			"question_id": 69293585,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69293585/error-msb6006-link-exe-exited-with-code-1-when-run-sdv-static-driver-verifi",
+			"title": "error MSB6006: &quot;link.exe&quot; exited with code 1 When run SDV ( Static Driver Verifier) , Visual studio 2019 , SDK 10 build 19041, windows 10 build 19041"
+		},
+		{
+			"tags": [
+				"object",
+				"dispose",
+				"libvlcsharp"
+			],
+			"owner": {
+				"account_id": 254708,
+				"reputation": 105,
+				"user_id": 534287,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/4888485eebed6772a40d9cb5a17b7c4a?s=256&d=identicon&r=PG",
+				"display_name": "mooncaptain",
+				"link": "https://stackoverflow.com/users/534287/mooncaptain"
+			},
+			"is_answered": false,
+			"view_count": 46,
+			"answer_count": 1,
+			"score": 0,
+			"last_activity_date": 1634867136,
+			"creation_date": 1634752743,
+			"last_edit_date": 1634842621,
+			"question_id": 69650954,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69650954/memory-access-violation-disposing-libvlcsharp-objects-from-a-task",
+			"title": "Memory Access Violation disposing libvlcsharp objects from a task"
+		},
+		{
+			"tags": [
+				"node.js",
+				"database",
+				"postgresql",
+				"database-connection",
+				"devops"
+			],
+			"owner": {
+				"account_id": 15817775,
+				"reputation": 1,
+				"user_id": 11412960,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/bcbe12c7ae5a8857878ebe5dfed72309?s=256&d=identicon&r=PG&f=1",
+				"display_name": "Suhhs",
+				"link": "https://stackoverflow.com/users/11412960/suhhs"
+			},
+			"is_answered": true,
+			"view_count": 43,
+			"accepted_answer_id": 69669466,
+			"answer_count": 1,
+			"score": 0,
+			"last_activity_date": 1634855446,
+			"creation_date": 1632053082,
+			"question_id": 69243096,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69243096/connecting-to-postgressql-hosted-online-using-nodejs",
+			"title": "Connecting to PostgresSQL hosted online using NodeJS"
+		},
+		{
+			"tags": [
+				"c#",
+				"logging",
+				"fody",
+				"compile-time-weaving"
+			],
+			"owner": {
+				"account_id": 22803322,
+				"reputation": 51,
+				"user_id": 16955687,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/0a1de90c5b2363ebdc6e69e90014743a?s=256&d=identicon&r=PG&f=1",
+				"display_name": "FluffyBike",
+				"link": "https://stackoverflow.com/users/16955687/fluffybike"
+			},
+			"is_answered": false,
+			"view_count": 34,
+			"answer_count": 1,
+			"score": 0,
+			"last_activity_date": 1634730202,
+			"creation_date": 1634410320,
+			"last_edit_date": 1634449365,
+			"question_id": 69598671,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69598671/how-to-reference-a-fody-methoddecorator-in-another-project",
+			"title": "How to reference a Fody MethodDecorator in another project?"
+		},
+		{
+			"tags": [
+				"c#",
+				"visual-studio",
+				"visual-studio-2019",
+				"locked-files"
+			],
+			"owner": {
+				"account_id": 162831,
+				"reputation": 4577,
+				"user_id": 384556,
+				"user_type": "registered",
+				"accept_rate": 72,
+				"profile_image": "https://www.gravatar.com/avatar/f0302a4256808b94f1037e0dd2806759?s=256&d=identicon&r=PG",
+				"display_name": "leon22",
+				"link": "https://stackoverflow.com/users/384556/leon22"
+			},
+			"is_answered": true,
+			"view_count": 12662,
+			"accepted_answer_id": 57140763,
+			"answer_count": 8,
+			"score": 7,
+			"last_activity_date": 1634683087,
+			"creation_date": 1562146045,
+			"last_edit_date": 1619101750,
+			"question_id": 56866981,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/56866981/file-is-locked-by-visual-studio-2019",
+			"title": "File is locked by Visual Studio 2019"
+		},
+		{
+			"tags": [
+				"c++",
+				"windows",
+				"visual-studio",
+				"linker-errors",
+				"visual-studio-2015"
+			],
+			"owner": {
+				"account_id": 1836133,
+				"reputation": 1187,
+				"user_id": 1666510,
+				"user_type": "registered",
+				"accept_rate": 75,
+				"profile_image": "https://www.gravatar.com/avatar/f8f4d7c6d40f077c6e964c071fcdce0e?s=256&d=identicon&r=PG&f=1",
+				"display_name": "Enigma",
+				"link": "https://stackoverflow.com/users/1666510/enigma"
+			},
+			"is_answered": true,
+			"view_count": 3016,
+			"accepted_answer_id": 35612548,
+			"answer_count": 1,
+			"score": 2,
+			"last_activity_date": 1634676493,
+			"creation_date": 1456330378,
+			"last_edit_date": 1634676493,
+			"question_id": 35607238,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/35607238/unable-to-compile-basic-program-in-visual-studio-community-2015-lnk2019-msvcr",
+			"title": "Unable to compile basic program in Visual Studio Community 2015 (LNK2019 - MSVCRTD.lib)"
+		},
+		{
+			"tags": [
+				"visual-studio",
+				"powershell"
+			],
+			"owner": {
+				"account_id": 17000709,
+				"reputation": 51,
+				"user_id": 12298174,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/6c1a81a0b836dc98acf0522be4d418ac?s=256&d=identicon&r=PG&f=1",
+				"display_name": "DjAmadej",
+				"link": "https://stackoverflow.com/users/12298174/djamadej"
+			},
+			"is_answered": true,
+			"view_count": 28,
+			"answer_count": 1,
+			"score": 1,
+			"last_activity_date": 1634656281,
+			"creation_date": 1634653295,
+			"last_edit_date": 1634656187,
+			"question_id": 69632616,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69632616/visual-studio-2019-failed-to-initialize-the-powershell-host",
+			"title": "Visual Studio 2019: Failed to initialize the powershell host"
+		},
+		{
+			"tags": [
+				"visual-studio",
+				"biztalk",
+				"biztalk-2013",
+				"biztalk-deployment"
+			],
+			"owner": {
+				"account_id": 2999354,
+				"reputation": 31,
+				"user_id": 2545123,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/98dfaee304c28350cb6fc1d2d797e08f?s=256&d=identicon&r=PG",
+				"display_name": "John Ginn",
+				"link": "https://stackoverflow.com/users/2545123/john-ginn"
+			},
+			"is_answered": true,
+			"view_count": 3441,
+			"answer_count": 7,
+			"score": 2,
+			"last_activity_date": 1634636231,
+			"creation_date": 1372829510,
+			"last_edit_date": 1434682101,
+			"question_id": 17440375,
+			"content_license": "CC BY-SA 3.0",
+			"link": "https://stackoverflow.com/questions/17440375/error-saving-map-stored-procedure-returned-non-zero-result",
+			"title": "Error saving map. Stored procedure returned non-zero result"
+		},
+		{
+			"tags": [
+				"c++"
+			],
+			"owner": {
+				"account_id": 22875334,
+				"reputation": 5,
+				"user_id": 17017752,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/f45009b9ca50fbb43051ba9133d11a3e?s=256&d=identicon&r=PG",
+				"display_name": "jaronbass21",
+				"link": "https://stackoverflow.com/users/17017752/jaronbass21"
+			},
+			"is_answered": true,
+			"view_count": 70,
+			"closed_date": 1634566073,
+			"answer_count": 1,
+			"score": -1,
+			"last_activity_date": 1634592079,
+			"creation_date": 1634565912,
+			"question_id": 69617524,
+			"link": "https://stackoverflow.com/questions/69617524/c-linking-error-no-idea-what-im-doing-wrong",
+			"closed_reason": "Duplicate",
+			"title": "C++ linking error no idea what I&#39;m doing wrong"
+		},
+		{
+			"tags": [
+				"jquery",
+				"twitter-bootstrap",
+				"visual-studio",
+				"typescript",
+				"nuget-package"
+			],
+			"owner": {
+				"account_id": 1517412,
+				"reputation": 9956,
+				"user_id": 1418091,
+				"user_type": "registered",
+				"accept_rate": 79,
+				"profile_image": "https://www.gravatar.com/avatar/422bbc29f7868f20841df82fa775fbc9?s=256&d=identicon&r=PG",
+				"display_name": "embedded.kyle",
+				"link": "https://stackoverflow.com/users/1418091/embedded-kyle"
+			},
+			"is_answered": true,
+			"view_count": 14807,
+			"answer_count": 5,
+			"score": 31,
+			"last_activity_date": 1634560697,
+			"creation_date": 1485982619,
+			"last_edit_date": 1486066533,
+			"question_id": 41989621,
+			"content_license": "CC BY-SA 3.0",
+			"link": "https://stackoverflow.com/questions/41989621/cannot-find-type-definition-file-for-jquery",
+			"title": "Cannot find type definition file for &#39;jquery&#39;"
+		},
+		{
+			"tags": [
+				"c++",
+				"mysql",
+				"database",
+				"visual-studio",
+				"soci"
+			],
+			"owner": {
+				"account_id": 12148287,
+				"reputation": 622,
+				"user_id": 8869649,
+				"user_type": "registered",
+				"profile_image": "https://lh6.googleusercontent.com/-u_VVCMIVyxo/AAAAAAAAAAI/AAAAAAABJ-E/1Q3CKmvqfe4/photo.jpg?sz=256",
+				"display_name": "Lapo",
+				"link": "https://stackoverflow.com/users/8869649/lapo"
+			},
+			"is_answered": false,
+			"view_count": 35,
+			"answer_count": 0,
+			"score": 0,
+			"last_activity_date": 1634550533,
+			"creation_date": 1634550533,
+			"question_id": 69613989,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69613989/how-to-configure-soci-db-access-library-with-mysql-in-visual-studio-2019",
+			"title": "How to configure SOCI DB access library with MySQL in Visual Studio 2019?"
+		},
+		{
+			"tags": [
+				"java",
+				"spring",
+				"spring-boot",
+				"visual-studio-code",
+				"vscode-extensions"
+			],
+			"owner": {
+				"account_id": 16795840,
+				"reputation": 13,
+				"user_id": 12142313,
+				"user_type": "registered",
+				"profile_image": "https://i.stack.imgur.com/5b8oR.jpg?s=256&g=1",
+				"display_name": "Nathan Le",
+				"link": "https://stackoverflow.com/users/12142313/nathan-le"
+			},
+			"is_answered": false,
+			"view_count": 34,
+			"answer_count": 1,
+			"score": 0,
+			"last_activity_date": 1634539535,
+			"creation_date": 1634457520,
+			"question_id": 69602364,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69602364/how-can-i-go-to-the-error-line-code-in-visual-studio-codes-java-debug-console",
+			"title": "How can I go to the error line code in Visual Studio Code&#39;s Java Debug Console"
+		},
+		{
+			"tags": [
+				"c++",
+				"templates",
+				"boost",
+				"c++20"
+			],
+			"owner": {
+				"account_id": 17980144,
+				"reputation": 39,
+				"user_id": 13066695,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/85a623e4dc77599ded95e31f8804e971?s=256&d=identicon&r=PG&f=1",
+				"display_name": "CMichalk",
+				"link": "https://stackoverflow.com/users/13066695/cmichalk"
+			},
+			"is_answered": false,
+			"view_count": 42,
+			"answer_count": 1,
+			"score": 1,
+			"last_activity_date": 1634528818,
+			"creation_date": 1614450290,
+			"question_id": 66402060,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/66402060/how-do-i-create-a-templated-template-specialization-of-a-function-in-c-c20",
+			"title": "How do I create a templated template specialization of a function in c++/c++20?"
+		},
+		{
+			"tags": [
+				"python",
+				"python-3.x",
+				"visual-studio-code",
+				"anaconda",
+				"conda"
+			],
+			"owner": {
+				"account_id": 3988201,
+				"reputation": 4381,
+				"user_id": 3288092,
+				"user_type": "registered",
+				"accept_rate": 62,
+				"profile_image": "https://i.stack.imgur.com/D6zZM.png?s=256&g=1",
+				"display_name": "BernardL",
+				"link": "https://stackoverflow.com/users/3288092/bernardl"
+			},
+			"is_answered": true,
+			"view_count": 91743,
+			"accepted_answer_id": 54876839,
+			"answer_count": 16,
+			"score": 60,
+			"last_activity_date": 1634474015,
+			"creation_date": 1550843954,
+			"last_edit_date": 1551145273,
+			"question_id": 54828713,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/54828713/working-with-anaconda-in-visual-studio-code",
+			"title": "Working with Anaconda in Visual Studio Code"
+		},
+		{
+			"tags": [
+				"html",
+				"csv",
+				"download",
+				"vue.js"
+			],
+			"owner": {
+				"account_id": 7123281,
+				"reputation": 199,
+				"user_id": 5447102,
+				"user_type": "registered",
+				"profile_image": "https://i.stack.imgur.com/mRAEm.png?s=256&g=1",
+				"display_name": "Judd",
+				"link": "https://stackoverflow.com/users/5447102/judd"
+			},
+			"is_answered": true,
+			"view_count": 25778,
+			"accepted_answer_id": 48028158,
+			"answer_count": 8,
+			"score": 11,
+			"last_activity_date": 1634458313,
+			"creation_date": 1514506403,
+			"last_edit_date": 1592644375,
+			"question_id": 48015954,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/48015954/how-to-download-a-locally-stored-file-in-vuejs",
+			"title": "How to download a locally stored file in VueJS"
+		},
+		{
+			"tags": [
+				"visual-studio",
+				"visual-studio-2017"
+			],
+			"owner": {
+				"account_id": 11532756,
+				"reputation": 11,
+				"user_id": 8451234,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/c5c8ee297632c309c13d5bf9f2cf510f?s=256&d=identicon&r=PG&f=1",
+				"display_name": "Benjamin",
+				"link": "https://stackoverflow.com/users/8451234/benjamin"
+			},
+			"is_answered": true,
+			"view_count": 3113,
+			"answer_count": 2,
+			"score": 1,
+			"last_activity_date": 1634403022,
+			"creation_date": 1502460617,
+			"last_edit_date": 1502461239,
+			"question_id": 45637290,
+			"content_license": "CC BY-SA 3.0",
+			"link": "https://stackoverflow.com/questions/45637290/visual-studio-remote-debugger-failed-to-start",
+			"title": "Visual Studio Remote Debugger Failed to Start"
+		},
+		{
+			"tags": [
+				"c++",
+				"opencv",
+				"cmake",
+				"ubuntu-20.04"
+			],
+			"owner": {
+				"account_id": 20884117,
+				"reputation": 29,
+				"user_id": 15341103,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/469293951d4644db738c3c97a1066da3?s=256&d=identicon&r=PG&f=1",
+				"display_name": "theY2Kbug",
+				"link": "https://stackoverflow.com/users/15341103/they2kbug"
+			},
+			"is_answered": false,
+			"view_count": 40,
+			"answer_count": 0,
+			"score": 0,
+			"last_activity_date": 1634391266,
+			"creation_date": 1634389883,
+			"last_edit_date": 1634391266,
+			"question_id": 69595903,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69595903/im-unable-to-install-opencv-4-5-4-c-on-ubuntu-20-04",
+			"title": "I&#39;m unable to install opencv 4.5.4 (C++) on Ubuntu 20.04"
+		},
+		{
+			"tags": [
+				"xamarin",
+				"xamarin.ios",
+				"xamarin.android"
+			],
+			"owner": {
+				"account_id": 10953046,
+				"reputation": 13,
+				"user_id": 8048804,
+				"user_type": "registered",
+				"profile_image": "https://lh5.googleusercontent.com/-hXigqFHhgjU/AAAAAAAAAAI/AAAAAAAAAPQ/7hyWI47smjA/photo.jpg?sz=256",
+				"display_name": "Pedro Martins",
+				"link": "https://stackoverflow.com/users/8048804/pedro-martins"
+			},
+			"is_answered": false,
+			"view_count": 161,
+			"answer_count": 0,
+			"score": 0,
+			"last_activity_date": 1634379767,
+			"creation_date": 1527186942,
+			"last_edit_date": 1634379767,
+			"question_id": 50516021,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/50516021/xamarin-forms-pcl-missing-references",
+			"title": "Xamarin Forms PCL - Missing references"
+		},
+		{
+			"tags": [
+				"windows",
+				"linker",
+				"clang",
+				"x86-64",
+				"ld"
+			],
+			"owner": {
+				"account_id": 17812220,
+				"reputation": 143,
+				"user_id": 12936536,
+				"user_type": "registered",
+				"profile_image": "https://www.gravatar.com/avatar/b282f64eca7be83a5d95ca40e31df51a?s=256&d=identicon&r=PG&f=1",
+				"display_name": "Eric Stotch",
+				"link": "https://stackoverflow.com/users/12936536/eric-stotch"
+			},
+			"is_answered": false,
+			"view_count": 27,
+			"answer_count": 1,
+			"score": 1,
+			"last_activity_date": 1634330881,
+			"creation_date": 1634285017,
+			"last_edit_date": 1634285450,
+			"question_id": 69581629,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69581629/how-do-i-link-with-clang-on-windows",
+			"title": "How do I link with clang on windows?"
+		},
+		{
+			"tags": [
+				"c++",
+				"visual-studio-2017"
+			],
+			"owner": {
+				"account_id": 35101,
+				"reputation": 1858,
+				"user_id": 99312,
+				"user_type": "registered",
+				"accept_rate": 51,
+				"profile_image": "https://www.gravatar.com/avatar/a2ae8510ad48b14c617d7f686ceed7b4?s=256&d=identicon&r=PG",
+				"display_name": "BrianK",
+				"link": "https://stackoverflow.com/users/99312/briank"
+			},
+			"is_answered": false,
+			"view_count": 7301,
+			"answer_count": 1,
+			"score": 0,
+			"last_activity_date": 1634270960,
+			"creation_date": 1510548327,
+			"question_id": 47257211,
+			"content_license": "CC BY-SA 3.0",
+			"link": "https://stackoverflow.com/questions/47257211/cant-find-stdio-h-in-new-visual-studio-2017-community-project",
+			"title": "can&#39;t find stdio.h in new Visual Studio 2017 Community project"
+		},
+		{
+			"tags": [
+				"c#",
+				"asp.net-mvc",
+				"asp.net-core"
+			],
+			"owner": {
+				"account_id": 1420608,
+				"reputation": 5036,
+				"user_id": 1345309,
+				"user_type": "registered",
+				"accept_rate": 86,
+				"profile_image": "https://i.stack.imgur.com/Nyg2A.png?s=256&g=1",
+				"display_name": "OmniOwl",
+				"link": "https://stackoverflow.com/users/1345309/omniowl"
+			},
+			"is_answered": true,
+			"view_count": 2667,
+			"accepted_answer_id": 58059150,
+			"answer_count": 2,
+			"score": 10,
+			"last_activity_date": 1634231250,
+			"creation_date": 1568964367,
+			"last_edit_date": 1569228049,
+			"question_id": 58023683,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/58023683/visual-studio-debugging-stop-immediately-on-file-upload-in-mvc",
+			"title": "Visual Studio debugging stop immediately on file upload in mvc?"
+		},
+		{
+			"tags": [
+				"fortran",
+				"linker-errors",
+				"intel-fortran",
+				"lnk2019",
+				"imsl"
+			],
+			"owner": {
+				"account_id": 20161672,
+				"reputation": 1,
+				"user_id": 17150475,
+				"user_type": "registered",
+				"profile_image": "https://lh6.googleusercontent.com/-NUKgxDVUG04/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmjK32x9fCozaOC-BlaGvx_lmDjzw/s96-c/photo.jpg?sz=256",
+				"display_name": "Wayne Y.",
+				"link": "https://stackoverflow.com/users/17150475/wayne-y"
+			},
+			"is_answered": false,
+			"view_count": 21,
+			"answer_count": 0,
+			"score": 0,
+			"last_activity_date": 1634216601,
+			"creation_date": 1634216415,
+			"last_edit_date": 1634216601,
+			"question_id": 69571191,
+			"content_license": "CC BY-SA 4.0",
+			"link": "https://stackoverflow.com/questions/69571191/fortran-error-lnk2019-unresolved-external-symbol-d-zanly-referenced-in-functio",
+			"title": "Fortran Error LNK2019 - Unresolved External Symbol D_ZANLY referenced in function MAIN_"
+		},
+		{
+			"tags": [
+				".net",
+				"visual-studio",
+				"crystal-reports",
+				"webforms"
+			],
+			"owner": {
+				"account_id": 18119,
+				"reputation": 25663,
+				"user_id": 41211,
+				"user_type": "registered",
+				"accept_rate": 82,
+				"profile_image": "https://www.gravatar.com/avatar/23fff93ede98c6cd922ef17b68b38a0c?s=256&d=identicon&r=PG",
+				"display_name": "GONeale",
+				"link": "https://stackoverflow.com/users/41211/goneale"
+			},
+			"is_answered": false,
+			"view_count": 8145,
+			"answer_count": 1,
+			"score": 1,
+			"last_activity_date": 1634213225,
+			"creation_date": 1256795810,
+			"last_edit_date": 1256869724,
+			"question_id": 1641832,
+			"content_license": "CC BY-SA 2.5",
+			"link": "https://stackoverflow.com/questions/1641832/the-report-you-requested-requires-further-information-error-using-sqldatasourc",
+			"title": "&#39;The report you requested requires further information&#39; error using SqlDataSource with Crystal Reports"
+		}
+	],
+	"has_more": true,
+	"quota_max": 300,
+	"quota_remaining": 298
+}

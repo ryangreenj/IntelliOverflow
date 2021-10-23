@@ -3,18 +3,71 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
+             xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0" xmlns:iovsplugin="clr-namespace:IOVSPlugin"
              Background="{DynamicResource {x:Static vsshell:VsBrushes.WindowKey}}"
              Foreground="{DynamicResource {x:Static vsshell:VsBrushes.WindowTextKey}}"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300"
-             Name="IntelliOverflow">
+             x:Name="uc">
     <Grid>
-        <StackPanel Orientation="Vertical">
-            <TextBlock Margin="10" HorizontalAlignment="Center">IntelliOverflow</TextBlock>
-            <TextBox Height="23" TextWrapping="Wrap" Text="Enter Search..."/>
-            <Button Content="Search" Click="searchBtn_Click" Width="120" Height="80" x:Name="searchBtn" Margin="90,0"/>
-            <ListBox x:Name="listBox" Height="140"/>
-        </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="24" />
+            </Grid.ColumnDefinitions>
+            
+            <TextBox x:Name="queryTextBox" Grid.Column="0" Text="Enter the search query..." GotFocus="RemovePlaceholderText" LostFocus="AddPlaceholderText" IsTabStop="False" FontSize="14" Height="24" />
+            <Button x:Name="searchButton" Grid.Column="1" Cursor="Hand">
+                <Button.Template>
+                    <ControlTemplate>
+                        <!-- https://stackoverflow.com/questions/57497051/how-to-display-images-in-a-visual-studio-extension -->
+                        <Image Source="pack://application:,,,/IOVSPlugin;component/Resources/baseline_search_black_24dp.png" Width="24" Height="24" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+        
+        <ListBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="5" ItemsSource="{Binding Path=Posts, ElementName=uc}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Text="{Binding Path=Score}" FontSize="48" FontWeight="Bold" Margin="5" />
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Path=Title}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </UserControl>
