@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Reference Include="IntelliOverflowAPI">
-      <HintPath>..\IntelliOverflowAPI\bin\Debug\netcoreapp3.1\IntelliOverflowAPI.dll</HintPath>
+      <HintPath>..\IntelliOverflowAPI\bin\Debug\IntelliOverflowAPI.dll</HintPath>
     </Reference>
   </ItemGroup>
 

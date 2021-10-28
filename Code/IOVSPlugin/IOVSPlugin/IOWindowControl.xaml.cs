@@ -2,8 +2,11 @@
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+
+using IntelliOverflowAPI;
 
 namespace IOVSPlugin
 {
@@ -25,6 +28,8 @@ namespace IOVSPlugin
                 }
             }
         }
+
+        private string recentSearch = "";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IOWindowControl"/> class.
@@ -62,6 +67,37 @@ namespace IOVSPlugin
             }
         }
 
+        public async void DoSearch(string query, bool updateSearchBox=true)
+        {
+            Task<StackExchangeRequest> task = API.DoSearchAsync(query);
+            StackExchangeRequest output = await task;
+            recentSearch = query;
+
+            List<SOPost> newPosts = new List<SOPost>();
+
+            foreach (Post p in output.items)
+            {
+                SOPost nextPost = new SOPost();
+                nextPost.Tags = p.tags;
+                nextPost.IsAnswered = p.is_answered;
+                nextPost.ViewCount = p.view_count;
+                nextPost.AnswerCount = p.answer_count;
+                nextPost.Score = p.score;
+                nextPost.CreationDate = p.creation_date;
+                nextPost.QuestionID = p.question_id;
+                nextPost.Title = p.title;
+
+                newPosts.Add(nextPost);
+            }
+
+            Posts = newPosts;
+
+            if (updateSearchBox)
+            {
+                queryTextBox.Text = query;
+            }
+        }
+
         private void AddPlaceholderText(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(queryTextBox.Text))
@@ -83,6 +119,21 @@ namespace IOVSPlugin
             MessageBox.Show(
                 string.Format(System.Globalization.CultureInfo.CurrentUICulture, "Invoked '{0}'", this.ToString()),
                 "IOWindow");
+        }
+
+        private void searchButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(string.IsNullOrWhiteSpace(queryTextBox.Text) || queryTextBox.Text == "Enter the search query..."))
+            {
+                if (queryTextBox.Text != recentSearch)
+                {
+                    DoSearch(queryTextBox.Text, false);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Search query box is empty, please enter a search term", "Error: Empty Search", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

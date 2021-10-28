@@ -5,6 +5,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 
 namespace IntelliOverflowAPI
 {
@@ -52,7 +53,7 @@ namespace IntelliOverflowAPI
 
     public class API
     {
-        public static async System.Threading.Tasks.Task<StackExchangeRequest> DoSearchAsync(string query)
+        public static async Task<StackExchangeRequest> DoSearchAsync(string query)
         {
             StackExchangeRequest request;
 
