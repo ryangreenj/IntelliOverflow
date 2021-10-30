@@ -30,5 +30,12 @@ namespace IOVSPlugin
             // the object returned by the Content property.
             this.Content = new IOWindowControl();
         }
+
+        public void SendErrorToSearch(string errorCode, string errorText)
+        {
+            IOWindowControl control = (IOWindowControl)this.Content;
+
+            control.DoSearch(errorCode + " " + errorText);
+        }
     }
 }

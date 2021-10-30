@@ -30,7 +30,7 @@
     called "command set" and is used to group different command inside a logically related
     group; your package should define its own command set in order to avoid collisions
     with command ids defined by other packages. -->
-
+    
     <!--Buttons section. -->
     <!--This section defines the elements the user can interact with, like a menu command or a button
         or combo box in a toolbar. -->
@@ -49,6 +49,13 @@
           <ButtonText>Intelli Overflow</ButtonText>
         </Strings>
       </Button>
+      
+      <Button guid="guidIOVSPluginPackageCmdSet" id="cmdidErrorListSearch" priority="0x0100" type="Button">
+        <Icon guid="guidImages" id="bmpPicSearch" />
+        <Strings>
+          <ButtonText>Search on Stack Overflow</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -60,8 +67,22 @@
             must be the actual index (1-based) of the bitmap inside the bitmap strip. -->
       <Bitmap guid="guidImages" href="Resources\IOWindowCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
     </Bitmaps>
+    
+    <Groups>
+      <Group guid="guidIOVSPluginPackageCmdSet" id="ErrorListGroup" />
+    </Groups>
   </Commands>
 
+    <CommandPlacements>
+        <CommandPlacement guid="guidIOVSPluginPackageCmdSet" id="ErrorListGroup" priority="0x1000">
+            <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ERRORLIST" />
+        </CommandPlacement>
+
+        <CommandPlacement guid="guidIOVSPluginPackageCmdSet" id="cmdidErrorListSearch" priority="0x0001">
+            <Parent guid="guidIOVSPluginPackageCmdSet" id="ErrorListGroup" />
+        </CommandPlacement>
+    </CommandPlacements>
+  
   <Symbols>
     <!-- This is the package guid. -->
     <GuidSymbol name="guidIOVSPluginPackage" value="{50562903-5696-44f0-95e2-e6869e78c651}" />
@@ -70,6 +91,8 @@
     <GuidSymbol name="guidIOVSPluginPackageCmdSet" value="{a794eb1d-56e9-4cb5-bbbc-c27bcb499722}">
       <IDSymbol name="IOWindowCommandId" value="0x0100" />
       <IDSymbol value="257" name="cmdidIOWindowCommand" />
+      <IDSymbol value="258" name="cmdidErrorListSearch" />
+      <IDSymbol value="4129" name="ErrorListGroup" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{403a017e-3267-40b7-81d1-edc15358b4bb}">
