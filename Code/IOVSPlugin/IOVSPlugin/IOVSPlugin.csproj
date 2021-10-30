@@ -96,7 +96,6 @@
     <Resource Include="Resources\baseline_search_black_24dp.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Content Include="Resources\ErrorListSearch.png" />
     <Content Include="Resources\IOWindowCommand.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -69,13 +69,20 @@ namespace IOVSPlugin
 
         public async void DoSearch(string query, bool updateSearchBox=true)
         {
+            if (query == recentSearch)
+            {
+                return;
+            }
+
             Task<StackExchangeRequest> task = API.DoSearchAsync(query);
-            StackExchangeRequest output = await task;
+            StackExchangeRequest requestOutput = await task;
+            List<Post> posts = API.RankResults(requestOutput);
             recentSearch = query;
+            queryTextBox.Foreground = System.Windows.Media.Brushes.Black;
 
             List<SOPost> newPosts = new List<SOPost>();
 
-            foreach (Post p in output.items)
+            foreach (Post p in posts)
             {
                 SOPost nextPost = new SOPost();
                 nextPost.Tags = p.tags;
@@ -125,10 +132,7 @@ namespace IOVSPlugin
         {
             if (!(string.IsNullOrWhiteSpace(queryTextBox.Text) || queryTextBox.Text == "Enter the search query..."))
             {
-                if (queryTextBox.Text != recentSearch)
-                {
-                    DoSearch(queryTextBox.Text, false);
-                }
+                DoSearch(queryTextBox.Text, false);
             }
             else
             {

@@ -33,7 +33,7 @@
                 <ColumnDefinition Width="24" />
             </Grid.ColumnDefinitions>
             
-            <TextBox x:Name="queryTextBox" Grid.Column="0" Text="Enter the search query..." GotFocus="RemovePlaceholderText" LostFocus="AddPlaceholderText" IsTabStop="False" FontSize="14" Height="24" />
+            <TextBox x:Name="queryTextBox" Grid.Column="0" Text="Enter the search query..." GotFocus="RemovePlaceholderText" LostFocus="AddPlaceholderText" IsTabStop="False" FontSize="14" Height="24" Foreground="Gray" />
             <Button x:Name="searchButton" Grid.Column="1" Cursor="Hand" Click="searchButton_Click">
                 <Button.Template>
                     <ControlTemplate>

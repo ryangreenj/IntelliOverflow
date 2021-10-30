@@ -84,7 +84,57 @@ namespace IntelliOverflowAPI
         {
             List<Post> posts = requestIn.items;
 
+            // SortedDictionary used to order posts by increasing weighted score
+            SortedDictionary<int, List<Post>> sortedPosts = new SortedDictionary<int, List<Post>>();
+
+            foreach (Post post in posts)
+            {
+                int postRank = GetPostWeightedRank(post);
+
+                if (!sortedPosts.ContainsKey(postRank))
+                {
+                    sortedPosts[postRank] = new List<Post>();
+                }
+
+                sortedPosts[postRank].Add(post);
+            }
+
+            posts.Clear();
+
+            foreach (List<Post> postList in sortedPosts.Values)
+            {
+                // Add items of same rank in order they appear in list
+                for (int i = 0; i < postList.Count; ++i)
+                {
+                    posts.Insert(i, postList[i]);
+                }
+            }
+
             return posts;
+        }
+
+        public static int GetPostWeightedRank(Post post)
+        {
+            const int ANSWERED_WEIGHT = 100;
+            const int NUM_ANSWERS_WEIGHT = 10;
+            const int SCORE_WEIGHT = 1;
+            const int NUM_TAGS_WEIGHT = 2; // TODO: Maybe do some ranking based on tag content as well
+
+            int weightedScore = 0;
+
+            // Want answered posts to usually come first, unless there is an unanswered post with a really high score for some reason
+            if (post.is_answered)
+            {
+                weightedScore += ANSWERED_WEIGHT;
+            }
+
+            weightedScore += post.answer_count * NUM_ANSWERS_WEIGHT;
+
+            weightedScore += post.score * SCORE_WEIGHT;
+
+            weightedScore += post.tags.Count * NUM_TAGS_WEIGHT;
+
+            return weightedScore;
         }
 
         public static string RetrievePostText(int postId)
