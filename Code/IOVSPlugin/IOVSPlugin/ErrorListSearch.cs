@@ -92,8 +92,10 @@ namespace IOVSPlugin
 
             string errorCode = "";
             string errorText = "";
+            string errorProject = "";
+            string errorFile = "";
 
-            if (GetSelectedError(out errorCode, out errorText))
+            if (GetSelectedError(out errorText, out errorCode, out errorProject, out errorFile))
             {
                 this.package.JoinableTaskFactory.RunAsync(async delegate
                 {
@@ -105,16 +107,18 @@ namespace IOVSPlugin
                     else
                     {
                         IOWindow ioWindow = (IOWindow)window;
-                        ioWindow.SendErrorToSearch(errorCode, errorText);
+                        ioWindow.SendErrorToSearch(errorText, errorCode, errorProject, errorFile);
                     }
                 });
             }
         }
 
-        private bool GetSelectedError(out string errorCode, out string errorText)
+        private bool GetSelectedError(out string errorText, out string errorCode, out string errorProject, out string errorFile)
         {
-            errorCode = "";
             errorText = "";
+            errorCode = "";
+            errorProject = "";
+            errorFile = "";
 
             EnvDTE80.DTE2 dte;
 
@@ -127,15 +131,6 @@ namespace IOVSPlugin
             {
                 object content;
 
-                if (selected.TryGetValue("errorcode", out content))
-                {
-                    errorCode = (string)content;
-                }
-                else
-                {
-                    return false;
-                }
-
                 if (selected.TryGetValue("text", out content))
                 {
                     errorText = (string)content;
@@ -143,6 +138,22 @@ namespace IOVSPlugin
                 else
                 {
                     return false;
+                }
+                
+                // These values are not as important as error text and may not always be present, so don't return if can't get
+                if (selected.TryGetValue("errorcode", out content))
+                {
+                    errorCode = (string)content;
+                }
+
+                if (selected.TryGetValue("project", out content))
+                {
+                    errorProject = (string)content;
+                }
+
+                if (selected.TryGetValue("file", out content))
+                {
+                    errorFile = (string)content;
                 }
 
                 return true;

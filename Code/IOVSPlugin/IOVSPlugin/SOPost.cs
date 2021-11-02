@@ -16,5 +16,6 @@ namespace IOVSPlugin
         public long CreationDate { get; set; }
         public int QuestionID { get; set; }
         public string Title { get; set; }
+        public string Link { get; set; }
     }
 }

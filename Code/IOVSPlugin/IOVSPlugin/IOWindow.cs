@@ -31,11 +31,13 @@ namespace IOVSPlugin
             this.Content = new IOWindowControl();
         }
 
-        public void SendErrorToSearch(string errorCode, string errorText)
+        public void SendErrorToSearch(string errorText, string errorCode, string errorProject = "", string errorFile = "")
         {
+            string query = Util.PrepareErrorQuery(errorText, errorCode, errorProject, errorFile);
+
             IOWindowControl control = (IOWindowControl)this.Content;
 
-            control.DoSearch(errorCode + " " + errorText);
+            control.DoSearch(query);
         }
     }
 }

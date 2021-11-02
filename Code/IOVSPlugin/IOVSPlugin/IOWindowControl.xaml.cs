@@ -74,6 +74,8 @@ namespace IOVSPlugin
                 return;
             }
 
+            postBoxSpinner.Visibility = Visibility.Visible;
+
             Task<StackExchangeRequest> task = API.DoSearchAsync(query);
             StackExchangeRequest requestOutput = await task;
             List<Post> posts = API.RankResults(requestOutput);
@@ -93,11 +95,14 @@ namespace IOVSPlugin
                 nextPost.CreationDate = p.creation_date;
                 nextPost.QuestionID = p.question_id;
                 nextPost.Title = p.title;
+                nextPost.Link = p.link;
 
                 newPosts.Add(nextPost);
             }
 
             Posts = newPosts;
+
+            postBoxSpinner.Visibility = Visibility.Hidden;
 
             if (updateSearchBox)
             {
@@ -114,20 +119,6 @@ namespace IOVSPlugin
             }
         }
 
-        /// <summary>
-        /// Handles click on the button by displaying a message box.
-        /// </summary>
-        /// <param name="sender">The event sender.</param>
-        /// <param name="e">The event args.</param>
-        [SuppressMessage("Microsoft.Globalization", "CA1300:SpecifyMessageBoxOptions", Justification = "Sample code")]
-        [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1300:ElementMustBeginWithUpperCaseLetter", Justification = "Default event handler naming pattern")]
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(
-                string.Format(System.Globalization.CultureInfo.CurrentUICulture, "Invoked '{0}'", this.ToString()),
-                "IOWindow");
-        }
-
         private void searchButton_Click(object sender, RoutedEventArgs e)
         {
             if (!(string.IsNullOrWhiteSpace(queryTextBox.Text) || queryTextBox.Text == "Enter the search query..."))
@@ -137,6 +128,18 @@ namespace IOVSPlugin
             else
             {
                 MessageBox.Show("Search query box is empty, please enter a search term", "Error: Empty Search", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void DoubleClickPost(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            SOPost selected = postList.SelectedItem as SOPost;
+
+            if (selected != null && !string.IsNullOrWhiteSpace(selected.Link))
+            {
+                // Want to create in-app window that will act as a limited browser
+                // For now just open post in default browser
+                System.Diagnostics.Process.Start(selected.Link);
             }
         }
     }
