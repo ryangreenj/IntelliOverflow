@@ -178,6 +178,7 @@
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="48" />
                         </Grid.ColumnDefinitions>
 
                         <Grid.RowDefinitions>
@@ -190,6 +191,14 @@
                         <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Path=Title}" TextWrapping="Wrap" />
                         <TextBlock Grid.Column="1" Grid.Row="1" Text="Answers: " />
                         <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Path=AnswerCount}" />
+
+                        <Button Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" Cursor="Hand" Click="externalBrowserButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Source="pack://application:,,,/IOVSPlugin;component/Resources/outline_link_black_24dp.png" Width="48" Height="48" />
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

@@ -24,6 +24,16 @@ namespace IOVSPlugin
             forwardPages = new Stack();
         }
 
+        public void GoToUri(string uri)
+        {
+            this.urlTextBox.Text = uri;
+
+            previousPages.Push(this.webBrowser.Source);
+            forwardPages.Clear();
+
+            this.webBrowser.Navigate(uri.ToString());
+        }
+
         private void urlTextBox_Enter(object sender, System.Windows.Input.KeyEventArgs e)
         {
             // This is a KeyUp event

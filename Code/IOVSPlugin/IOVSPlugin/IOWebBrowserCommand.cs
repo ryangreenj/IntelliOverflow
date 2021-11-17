@@ -95,5 +95,22 @@ namespace IOVSPlugin
                 }
             });
         }
+
+        public void RouteToLink(string link)
+        {
+            this.package.JoinableTaskFactory.RunAsync(async delegate
+            {
+                ToolWindowPane window = await this.package.ShowToolWindowAsync(typeof(IOWebBrowser), 0, true, this.package.DisposalToken);
+                if ((null == window) || (null == window.Frame))
+                {
+                    throw new NotSupportedException("Cannot create tool window");
+                }
+                else
+                {
+                    IOWebBrowser ioWindow = (IOWebBrowser)window;
+                    ioWindow.RouteToLink(link);
+                }
+            });
+        }
     }
 }

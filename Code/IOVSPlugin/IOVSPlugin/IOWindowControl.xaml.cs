@@ -137,9 +137,21 @@ namespace IOVSPlugin
 
             if (selected != null && !string.IsNullOrWhiteSpace(selected.Link))
             {
-                // Want to create in-app window that will act as a limited browser
-                // For now just open post in default browser
-                System.Diagnostics.Process.Start(selected.Link);
+                IOWebBrowserCommand.Instance.RouteToLink(selected.Link);
+            }
+        }
+
+        private void externalBrowserButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            if (btn.DataContext is SOPost)
+            {
+                SOPost selected = (SOPost)btn.DataContext;
+
+                if (selected != null && !string.IsNullOrWhiteSpace(selected.Link))
+                {
+                    System.Diagnostics.Process.Start(selected.Link);
+                }
             }
         }
     }

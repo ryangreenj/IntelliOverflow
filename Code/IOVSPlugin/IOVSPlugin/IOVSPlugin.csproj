@@ -106,6 +106,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\outline_link_black_24dp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\outline_arrow_back_black_24dp.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

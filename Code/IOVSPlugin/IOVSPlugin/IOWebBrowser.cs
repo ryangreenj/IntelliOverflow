@@ -31,6 +31,11 @@ namespace IOVSPlugin
             this.Content = new IOWebBrowserControl();
         }
 
-        
+        public void RouteToLink(string uri)
+        {
+            IOWebBrowserControl control = (IOWebBrowserControl)this.Content;
+
+            control.GoToUri(uri);
+        }
     }
 }
