@@ -46,6 +46,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ErrorListSearch.cs" />
+    <Compile Include="IOWebBrowser.cs" />
+    <Compile Include="IOWebBrowserCommand.cs" />
+    <Compile Include="IOWebBrowserControl.xaml.cs">
+      <DependentUpon>IOWebBrowserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IOWindow.cs" />
     <Compile Include="IOWindowCommand.cs" />
     <Compile Include="IOWindowControl.xaml.cs">
@@ -79,6 +84,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Toolkit.Wpf.UI.Controls.WebView">
+      <Version>6.1.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="16.0.206" ExcludeAssets="runtime" />
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="16.9.2017" />
   </ItemGroup>
@@ -88,12 +96,28 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="IOWebBrowserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="IOWindowControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\outline_arrow_back_black_24dp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\outline_arrow_forward_black_24dp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\outline_home_black_24dp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\outline_refresh_black_24dp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\baseline_search_black_24dp.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

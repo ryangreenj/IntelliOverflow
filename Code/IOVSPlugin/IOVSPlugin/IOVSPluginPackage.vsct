@@ -56,6 +56,14 @@
           <ButtonText>Search on Stack Overflow</ButtonText>
         </Strings>
       </Button>
+        
+      <Button guid="guidIOVSPluginPackageCmdSet" id="cmdidIOWebBrowserCommand" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <Strings>
+          <ButtonText>Intelli Overflow Browser</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -93,6 +101,7 @@
       <IDSymbol value="257" name="cmdidIOWindowCommand" />
       <IDSymbol value="258" name="cmdidErrorListSearch" />
       <IDSymbol value="4129" name="ErrorListGroup" />
+      <IDSymbol value="4130" name="cmdidIOWebBrowserCommand" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{403a017e-3267-40b7-81d1-edc15358b4bb}">

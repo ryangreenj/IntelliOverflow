@@ -27,6 +27,7 @@ namespace IOVSPlugin
     [Guid(IOVSPluginPackage.PackageGuidString)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(IOWindow))]
+    [ProvideToolWindow(typeof(IOWebBrowser))]
     public sealed class IOVSPluginPackage : AsyncPackage
     {
         /// <summary>
@@ -50,6 +51,7 @@ namespace IOVSPlugin
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
             await IOWindowCommand.InitializeAsync(this);
             await ErrorListSearch.InitializeAsync(this);
+            await IOWebBrowserCommand.InitializeAsync(this);
         }
 
         #endregion
