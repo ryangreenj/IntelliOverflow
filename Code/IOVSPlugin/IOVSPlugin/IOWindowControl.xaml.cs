@@ -110,6 +110,66 @@ namespace IOVSPlugin
             }
         }
 
+        public async void DoSearch(List<string> queries, bool updateSearchBox=true)
+        {
+            postBoxSpinner.Visibility = Visibility.Visible;
+
+
+            List<StackExchangeRequest> requests = new List<StackExchangeRequest>();
+            foreach (string query in queries)
+            {
+                Task<StackExchangeRequest> task = API.DoSearchAsync(query);
+                StackExchangeRequest requestOutput = await task;
+                requests.Add(requestOutput);
+            }
+
+            List<Post> posts = API.RankResults(requests);
+
+            queryTextBox.Foreground = System.Windows.Media.Brushes.Black;
+
+            List<SOPost> newPosts = new List<SOPost>();
+
+            foreach (Post p in posts)
+            {
+                // Filter out duplicates
+                bool cont = false;
+                foreach (SOPost sop in newPosts)
+                {
+                    if (sop.QuestionID == p.question_id)
+                    {
+                        cont = true;
+                        break;
+                    }
+                }
+
+                if (cont)
+                {
+                    continue;
+                }
+
+                SOPost nextPost = new SOPost();
+                nextPost.Tags = p.tags;
+                nextPost.IsAnswered = p.is_answered;
+                nextPost.ViewCount = p.view_count;
+                nextPost.AnswerCount = p.answer_count;
+                nextPost.Score = p.score;
+                nextPost.CreationDate = p.creation_date;
+                nextPost.QuestionID = p.question_id;
+                nextPost.Title = p.title;
+                nextPost.Link = p.link;
+
+                newPosts.Add(nextPost);
+            }
+
+            Posts = newPosts;
+
+            postBoxSpinner.Visibility = Visibility.Hidden;
+
+            if (updateSearchBox)
+            {
+                queryTextBox.Text = queries[0];
+            }
+        }
         private void AddPlaceholderText(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(queryTextBox.Text))

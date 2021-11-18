@@ -48,6 +48,27 @@ Throughout the course of the additions below, lack of proper, in-depth documenta
 	- Strip context of query (variable names, line numbers) to allow better results
 	- Experiment with different ways of constructing query from error
 
+## Milestone 3
+Milestone 3 was focused on adding an in-app post browser and improving the quality of posts returned by changing how queries are constructed and also combining multiple queries into one result.
+
+### API
+The API was enhanced with the following featues
+
+- Modify the weighting to give post score more importance
+- Support ranking multiple requests at the same time
+
+### Visual Studio Plugin
+The main enhancement to the Visual Studio Plugin for this milestone is the creation of an in-app post browser.
+
+- Support the API changes and combine multiple queries for better results
+    - In the future I want to move more of this to API side
+- Create an in-app post browser (new Tool Window)
+    - Functional web browser, though meant mainly for viewing Stack Overflow posts
+    - Forward, back, home, refresh buttons along with URL bar
+    - Supports modern web capabilities (HTML5, JS, CSS, PHP, etc)
+- Intelli Overflow Tool Window can launch in-app browser with post
+- Add a button in post listing to open post in external (default) web browser
+
 ## Results
 
 ## Conclusion

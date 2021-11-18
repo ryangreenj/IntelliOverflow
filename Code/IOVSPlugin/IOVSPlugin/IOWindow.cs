@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace IOVSPlugin
@@ -33,11 +34,17 @@ namespace IOVSPlugin
 
         public void SendErrorToSearch(string errorText, string errorCode, string errorProject = "", string errorFile = "")
         {
-            string query = Util.PrepareErrorQuery(errorText, errorCode, errorProject, errorFile);
+            //string query = Util.PrepareErrorQuery(errorText, errorCode, errorProject, errorFile);
+
+            List<string> queries = new List<string>();
+            queries.Add(Util.PrepareErrorQuery(errorText, errorCode, errorProject, errorFile));
+            queries.Add(Util.PrepareErrorQuery(errorText));
+            queries.Add(errorCode);
 
             IOWindowControl control = (IOWindowControl)this.Content;
 
-            control.DoSearch(query);
+            //control.DoSearch(query);
+            control.DoSearch(queries);
         }
     }
 }
