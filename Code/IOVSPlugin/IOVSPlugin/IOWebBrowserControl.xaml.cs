@@ -28,7 +28,7 @@ namespace IOVSPlugin
         {
             this.urlTextBox.Text = uri;
 
-            previousPages.Push(this.webBrowser.Source);
+            previousPages.Push(this.webBrowser.Source.ToString());
             forwardPages.Clear();
 
             this.webBrowser.Navigate(uri.ToString());
@@ -39,7 +39,7 @@ namespace IOVSPlugin
             // This is a KeyUp event
             if (e.Key == System.Windows.Input.Key.Enter)
             {
-                previousPages.Push(this.webBrowser.Source);
+                previousPages.Push(this.webBrowser.Source.ToString());
                 forwardPages.Clear();
                 Uri uri = new Uri(this.urlTextBox.Text, UriKind.RelativeOrAbsolute);
 
@@ -49,6 +49,9 @@ namespace IOVSPlugin
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
+            previousPages.Push(this.webBrowser.Source.ToString());
+            forwardPages.Clear();
+            this.urlTextBox.Text = "https://www.stackoverflow.com/";
             this.webBrowser.Navigate("https://www.stackoverflow.com/");
         }
 
@@ -56,8 +59,9 @@ namespace IOVSPlugin
         {
             if (previousPages.Count > 0)
             {
-                forwardPages.Push(this.webBrowser.Source);
+                forwardPages.Push(this.webBrowser.Source.ToString());
                 string uri = (string) previousPages.Pop();
+                this.urlTextBox.Text = uri;
                 this.webBrowser.Navigate(uri);
             }
         }
@@ -66,8 +70,9 @@ namespace IOVSPlugin
         {
             if (forwardPages.Count > 0)
             {
-                previousPages.Push(this.webBrowser.Source);
+                previousPages.Push(this.webBrowser.Source.ToString());
                 string uri = (string)forwardPages.Pop();
+                this.urlTextBox.Text = uri;
                 this.webBrowser.Navigate(uri);
             }
         }

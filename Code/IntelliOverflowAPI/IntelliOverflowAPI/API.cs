@@ -120,11 +120,26 @@ namespace IntelliOverflowAPI
 
             return posts;
         }
+		
+        public static List<Post> SortResults(List<StackExchangeRequest> requestsIn, SortType sortType = SortType.RANKED)
+        {
+            StackExchangeRequest combinedRequest = new StackExchangeRequest();
+            combinedRequest.items = new List<Post>();
+            foreach (StackExchangeRequest req in requestsIn)
+            {
+                foreach (Post p in req.items)
+                {
+                    combinedRequest.items.Add(p);
+                }
+            }
+
+            return SortResults(combinedRequest, sortType);
+        }
 
         public static long GetPostWeightedRank(Post post, SortType sortType = SortType.RANKED)
         {
             const int ANSWERED_WEIGHT = 100;
-            const int NUM_ANSWERS_WEIGHT = 10;
+            const int NUM_ANSWERS_WEIGHT = 2;
             const int SCORE_WEIGHT = 1;
             const int NUM_TAGS_WEIGHT = 2; // TODO: Maybe do some ranking based on tag content as well
 
