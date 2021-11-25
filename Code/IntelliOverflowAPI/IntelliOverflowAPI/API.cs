@@ -53,6 +53,14 @@ namespace IntelliOverflowAPI
 
     public class API
     {
+        public enum SortType
+        {
+            RANKED,
+            SCORE,
+            ANSWERS,
+            TAGS,
+            DATE
+        }
         public static async Task<StackExchangeRequest> DoSearchAsync(string query)
         {
             StackExchangeRequest request;
@@ -80,16 +88,16 @@ namespace IntelliOverflowAPI
             return request;
         }
 
-        public static List<Post> RankResults(StackExchangeRequest requestIn)
+        public static List<Post> SortResults(StackExchangeRequest requestIn, SortType sortType = SortType.RANKED)
         {
             List<Post> posts = requestIn.items;
 
             // SortedDictionary used to order posts by increasing weighted score
-            SortedDictionary<int, List<Post>> sortedPosts = new SortedDictionary<int, List<Post>>();
+            SortedDictionary<long, List<Post>> sortedPosts = new SortedDictionary<long, List<Post>>();
 
             foreach (Post post in posts)
             {
-                int postRank = GetPostWeightedRank(post);
+                long postRank = GetPostWeightedRank(post, sortType);
 
                 if (!sortedPosts.ContainsKey(postRank))
                 {
@@ -113,7 +121,7 @@ namespace IntelliOverflowAPI
             return posts;
         }
 
-        public static int GetPostWeightedRank(Post post)
+        public static long GetPostWeightedRank(Post post, SortType sortType = SortType.RANKED)
         {
             const int ANSWERED_WEIGHT = 100;
             const int NUM_ANSWERS_WEIGHT = 10;
@@ -122,17 +130,36 @@ namespace IntelliOverflowAPI
 
             int weightedScore = 0;
 
-            // Want answered posts to usually come first, unless there is an unanswered post with a really high score for some reason
-            if (post.is_answered)
+            switch (sortType)
             {
-                weightedScore += ANSWERED_WEIGHT;
+                case SortType.RANKED:
+                    // Want answered posts to usually come first, unless there is an unanswered post with a really high score for some reason
+                    if (post.is_answered)
+                    {
+                        weightedScore += ANSWERED_WEIGHT;
+                    }
+
+                    weightedScore += post.answer_count * NUM_ANSWERS_WEIGHT;
+
+                    weightedScore += post.score * SCORE_WEIGHT;
+
+                    weightedScore += post.tags.Count * NUM_TAGS_WEIGHT;
+                    break;
+                case SortType.SCORE:
+                    weightedScore = post.score;
+                    break;
+                case SortType.ANSWERS:
+                    weightedScore = post.answer_count;
+                    break;
+                case SortType.TAGS:
+                    weightedScore = post.tags.Count;
+                    break;
+                case SortType.DATE:
+                    weightedScore = post.creation_date;
+                    break;
+                default:
+                    break;
             }
-
-            weightedScore += post.answer_count * NUM_ANSWERS_WEIGHT;
-
-            weightedScore += post.score * SCORE_WEIGHT;
-
-            weightedScore += post.tags.Count * NUM_TAGS_WEIGHT;
 
             return weightedScore;
         }

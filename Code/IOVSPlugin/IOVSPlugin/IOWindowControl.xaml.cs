@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
@@ -30,6 +31,8 @@ namespace IOVSPlugin
         }
 
         private string recentSearch = "";
+        private API.SortType sortType = API.SortType.RANKED;
+        private Button[] sortButtons;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IOWindowControl"/> class.
@@ -50,6 +53,12 @@ namespace IOVSPlugin
             Posts.Add(sample);
             Posts.Add(sample);
             Posts.Add(sample);
+
+            sortType = API.SortType.RANKED;
+
+            sortButtons = new Button[] { sortRankedBtn, sortScoreBtn, sortAnswersBtn, sortTagsBtn, sortDateBtn };
+
+            SortButtonVisibility();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -78,7 +87,7 @@ namespace IOVSPlugin
 
             Task<StackExchangeRequest> task = API.DoSearchAsync(query);
             StackExchangeRequest requestOutput = await task;
-            List<Post> posts = API.RankResults(requestOutput);
+            List<Post> posts = API.SortResults(requestOutput);
             recentSearch = query;
             queryTextBox.Foreground = System.Windows.Media.Brushes.Black;
 
@@ -153,6 +162,25 @@ namespace IOVSPlugin
                     System.Diagnostics.Process.Start(selected.Link);
                 }
             }
+        }
+
+        private void sortButtonClick(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            sortType = (API.SortType)Array.IndexOf(sortButtons, btn);
+
+            SortButtonVisibility();
+        }
+
+        private void SortButtonVisibility()
+        {
+            foreach (Button b in sortButtons)
+            {
+                b.IsEnabled = true;
+            }
+
+            sortButtons[(int)sortType].IsEnabled = false;
         }
     }
 }
