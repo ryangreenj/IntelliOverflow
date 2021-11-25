@@ -33,6 +33,7 @@ namespace IOVSPlugin
         private string recentSearch = "";
         private API.SortType sortType = API.SortType.RANKED;
         private Button[] sortButtons;
+        private List<StackExchangeRequest> currentRequests;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IOWindowControl"/> class.
@@ -43,16 +44,7 @@ namespace IOVSPlugin
             this.InitializeComponent();
 
             Posts = new List<SOPost>();
-
-            SOPost sample = new SOPost();
-            sample.Score = 14;
-            sample.Title = "This is a sample stack overflow post question!!";
-            sample.IsAnswered = true;
-            sample.AnswerCount = 3;
-
-            Posts.Add(sample);
-            Posts.Add(sample);
-            Posts.Add(sample);
+            currentRequests = new List<StackExchangeRequest>();
 
             sortType = API.SortType.RANKED;
 
@@ -124,19 +116,30 @@ namespace IOVSPlugin
             postBoxSpinner.Visibility = Visibility.Visible;
 
 
-            List<StackExchangeRequest> requests = new List<StackExchangeRequest>();
+            currentRequests.Clear();
             foreach (string query in queries)
             {
                 Task<StackExchangeRequest> task = API.DoSearchAsync(query);
                 StackExchangeRequest requestOutput = await task;
-                requests.Add(requestOutput);
+                currentRequests.Add(requestOutput);
             }
 
-            List<Post> posts = API.RankResults(requests);
+            SortPostResults();
 
             queryTextBox.Foreground = System.Windows.Media.Brushes.Black;
 
+            postBoxSpinner.Visibility = Visibility.Hidden;
+
+            if (updateSearchBox)
+            {
+                queryTextBox.Text = queries[0];
+            }
+        }
+
+        private void SortPostResults()
+        {
             List<SOPost> newPosts = new List<SOPost>();
+            List<Post> posts = API.SortResults(currentRequests, sortType);
 
             foreach (Post p in posts)
             {
@@ -171,14 +174,8 @@ namespace IOVSPlugin
             }
 
             Posts = newPosts;
-
-            postBoxSpinner.Visibility = Visibility.Hidden;
-
-            if (updateSearchBox)
-            {
-                queryTextBox.Text = queries[0];
-            }
         }
+
         private void AddPlaceholderText(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(queryTextBox.Text))
@@ -229,6 +226,8 @@ namespace IOVSPlugin
             Button btn = (Button)sender;
 
             sortType = (API.SortType)Array.IndexOf(sortButtons, btn);
+
+            SortPostResults();
 
             SortButtonVisibility();
         }

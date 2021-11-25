@@ -170,12 +170,12 @@
             </Button>
         </Grid>
 
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="Sort By" FontSize="10" Margin="0,0,8,0" VerticalAlignment="Center"/>
-        <Button x:Name="sortRankedBtn" Grid.Column="2" Grid.Row="2" Content="Ranked" FontSize="10" Margin="0,0,5,0" Click="sortButtonClick" />
-        <Button x:Name="sortScoreBtn" Grid.Column="3" Grid.Row="2" Content="Score" FontSize="10" Margin="0,0,5,0" Click="sortButtonClick" />
-        <Button x:Name="sortAnswersBtn" Grid.Column="4" Grid.Row="2" Content="Answers" FontSize="10" Margin="0,0,5,0" Click="sortButtonClick" />
-        <Button x:Name="sortTagsBtn" Grid.Column="5" Grid.Row="2" Content="Tags" FontSize="10" Margin="0,0,5,0" Click="sortButtonClick" />
-        <Button x:Name="sortDateBtn" Grid.Column="6" Grid.Row="2" Content="Date" FontSize="10" Margin="0,0,5,0" Click="sortButtonClick" />
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Sort By" FontSize="12" Margin="0,0,8,0" VerticalAlignment="Center"/>
+        <Button x:Name="sortRankedBtn" Grid.Column="2" Grid.Row="2" Content="Relevant" FontSize="12" Margin="0,0,5,0" Click="sortButtonClick" ToolTip="Sort the posts by combined metrics" />
+        <Button x:Name="sortScoreBtn" Grid.Column="3" Grid.Row="2" Content="Score" FontSize="12" Margin="0,0,5,0" Click="sortButtonClick" ToolTip="Sort the posts by the post score" />
+        <Button x:Name="sortAnswersBtn" Grid.Column="4" Grid.Row="2" Content="Answers" FontSize="12" Margin="0,0,5,0" Click="sortButtonClick" ToolTip="Sort the posts by the number of answers" />
+        <Button x:Name="sortTagsBtn" Grid.Column="5" Grid.Row="2" Content="Tags" FontSize="12" Margin="0,0,5,0" Click="sortButtonClick" ToolTip="Sort the posts by the number of tags" />
+        <Button x:Name="sortDateBtn" Grid.Column="6" Grid.Row="2" Content="Date" FontSize="12" Margin="0,0,5,0" Click="sortButtonClick" ToolTip="Sort the posts by the date created" />
 
         <ListBox x:Name="postList" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="7" ItemsSource="{Binding Path=Posts, ElementName=uc}" Margin="0,5,0,0" MouseDoubleClick="DoubleClickPost">
             <ListBox.ItemTemplate>
