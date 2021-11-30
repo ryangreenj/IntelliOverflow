@@ -70,6 +70,7 @@ namespace IOVSPlugin
 
         public async void DoSearch(string query, bool updateSearchBox=true)
         {
+            /*
             if (query == recentSearch)
             {
                 return;
@@ -108,7 +109,8 @@ namespace IOVSPlugin
             if (updateSearchBox)
             {
                 queryTextBox.Text = query;
-            }
+            }*/
+            DoSearch(new List<string>{ query }, updateSearchBox);
         }
 
         public async void DoSearch(List<string> queries, bool updateSearchBox=true)
@@ -169,6 +171,7 @@ namespace IOVSPlugin
                 nextPost.QuestionID = p.question_id;
                 nextPost.Title = p.title;
                 nextPost.Link = p.link;
+                nextPost.FormatDate();
 
                 newPosts.Add(nextPost);
             }
@@ -200,6 +203,16 @@ namespace IOVSPlugin
         private void DoubleClickPost(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             SOPost selected = postList.SelectedItem as SOPost;
+
+            if (selected != null && !string.IsNullOrWhiteSpace(selected.Link))
+            {
+                IOWebBrowserCommand.Instance.RouteToLink(selected.Link);
+            }
+        }
+
+        private void ClickPost(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            SOPost selected = (SOPost)((ListBoxItem)postList.ContainerFromElement((Grid)sender)).Content;
 
             if (selected != null && !string.IsNullOrWhiteSpace(selected.Link))
             {

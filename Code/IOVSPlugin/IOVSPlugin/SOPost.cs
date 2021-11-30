@@ -17,5 +17,14 @@ namespace IOVSPlugin
         public int QuestionID { get; set; }
         public string Title { get; set; }
         public string Link { get; set; }
+        public string CreationDateString { get; set; }
+
+        public void FormatDate()
+        {
+            DateTime start = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            DateTime date = start.AddSeconds(CreationDate).ToLocalTime();
+
+            CreationDateString = date.Date.ToShortDateString();
+        }
     }
 }
