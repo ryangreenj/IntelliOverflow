@@ -177,7 +177,7 @@
         <Button x:Name="sortTagsBtn" Grid.Column="5" Grid.Row="2" Content="Tags" FontSize="12" Margin="0,0,5,0" Click="sortButtonClick" ToolTip="Sort the posts by the number of tags" />
         <Button x:Name="sortDateBtn" Grid.Column="6" Grid.Row="2" Content="Date" FontSize="12" Margin="0,0,5,0" Click="sortButtonClick" ToolTip="Sort the posts by the date created" />
 
-        <ListBox x:Name="postList" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="7" ItemsSource="{Binding Path=Posts, ElementName=uc}" Margin="0,5,0,0" HorizontalContentAlignment="Stretch">
+        <ListBox x:Name="postList" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="7" ItemsSource="{Binding Path=Posts, ElementName=uc}" Margin="0,5,0,0" HorizontalContentAlignment="Stretch" MouseDoubleClick="DoubleClickPost">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -189,7 +189,7 @@
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
-                        <Grid Grid.Row="0" MouseUp="ClickPost">
+                        <Grid Grid.Row="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto" />
                                 <ColumnDefinition Width="auto" />
